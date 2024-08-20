@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Callers App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            position: fixed;
+            height: 100%;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            padding: 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        .dashboard {
+            display: flex;
+            justify-content: space-between;
+        }
+        .dashboard .card {
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            width: 30%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI Callers App</h1>
+    </div>
+    <div class="sidebar">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#agents">Agents</a>
+        <a href="#scripts">Training Scripts</a>
+        <a href="#calls">Call Logs</a>
+        <a href="#campaigns">Campaigns</a>
+        <a href="#credits">Credits</a>
+        <a href="#upgrades">Upgrades</a>
+    </div>
+    <div class="content">
+        <!-- Dashboard Section -->
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <div class="dashboard">
+                <div class="card">
+                    <h3>Total Calls</h3>
+                    <p>1234</p>
+                </div>
+                <div class="card">
+                    <h3>Active Campaigns</h3>
+                    <p>5</p>
+                </div>
+                <div class="card">
+                    <h3>Credits Remaining</h3>
+                    <p>300</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Agents Section -->
+        <section id="agents">
+            <h2>Agents</h2>
+            <form>
+                <div class="form-group">
+                    <label for="agent-name">Agent Name</label>
+                    <input type="text" id="agent-name" name="agent-name">
+                </div>
+                <div class="form-group">
+                    <label for="agent-skills">Skills</label>
+                    <textarea id="agent-skills" name="agent-skills"></textarea>
+                </div>
+                <button type="submit">Request Agent</button>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Agent Name</th>
+                        <th>Skills</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Agent 1</td>
+                        <td>Sales, Support</td>
+                        <td>Active</td>
+                        <td>Edit | Remove</td>
+                    </tr>
+                    <!-- More rows as needed -->
+                </tbody>
+            </table>
+        </section>
+        
+        <!-- Training Scripts Section -->
+        <section id="scripts">
+            <h2>Training Scripts</h2>
+            <form>
+                <div class="form-group">
+                    <label for="script-title">Script Title</label>
+                    <input type="text" id="script-title" name="script-title">
+                </div>
+                <div class="form-group">
+                    <label for="script-content">Script Content</label>
+                    <textarea id="script-content" name="script-content"></textarea>
+                </div>
+                <button type="submit">Upload Script</button>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Script Title</th>
+                        <th>Version</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Welcome Script</td>
+                        <td>1.0</td>
+                        <td>2024-08-01</td>
+                        <td>Active</td>
+                        <td>Edit | Remove</td>
+                    </tr>
+                    <!-- More rows as needed -->
+                </tbody>
+            </table>
+        </section>
+        
+        <!-- Call Logs Section -->
+        <section id="calls">
+            <h2>Call Logs</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date & Time</th>
+                        <th>Agent</th>
+                        <th>Campaign</th>
+                        <th>Outcome</th>
+                        <th>Duration</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-08-10 14:30</td>
+                        <td>Agent 1</td>
+                        <td>Campaign 1</td>
+                        <td>Success</td>
+                        <td>5m 30s</td>
+                        <td>Listen | Download</td>
+                    </tr>
+                    <!-- More rows as needed -->
+                </tbody>
+            </table>
+        </section>
+        
+        <!-- Campaigns Section -->
+        <section id="campaigns">
+            <h2>Campaigns</h2>
+            <form>
+                <div class="form-group">
+                    <label for="campaign-name">Campaign Name</label>
+                    <input type="text" id="campaign-name" name="campaign-name">
+                </div>
+                <div class="form-group">
+                    <label for="campaign-objectives">Objectives</label>
+                    <textarea id="campaign-objectives" name="campaign-objectives"></textarea>
+                </div>
+                <button type="submit">Create Campaign</button>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Campaign Name</th>
+                        <th>Objectives</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Campaign 1</td>
+                        <td>Increase Sales</td>
+                        <td>Active</td>
+                        <td>Edit | Pause | Stop</td>
+                    </tr>
+                    <!-- More rows as needed -->
+                </tbody>
+            </table>
+        </section>
+        
+        <!-- Credits Section -->
+        <section id="credits">
+            <h2>Credits</h2>
+            <div class="form-group">
+                <label for="credit-usage">Current Credit Usage</label>
+                <input type="text" id="credit-usage" name="credit-usage" value="300" readonly>
+            </div>
+            <button type="button">Purchase Credits</button>
+        </section>
+        
+        <!-- Upgrades Section -->
+        <section id="upgrades">
+            <h2>Upgrades and Additional Services</h2>
+            <div class="form-group">
+                <label for="upgrade-request">Request Custom Solution</label>
+                <textarea id="upgrade-request" name="upgrade-request"></textarea>
+            </div>
+            <button type="submit">Submit Request</button>
+        </section>
+    </div>
+</body>
+</html>
